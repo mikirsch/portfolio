@@ -185,7 +185,7 @@ main {
     text-align: left;
   }
 
-  p {
+  .project > p {
     margin: 2rem auto;
   }
 
@@ -230,7 +230,7 @@ main {
     max-width: 90vw;
   }
 
-  p {
+ .project > p {
     margin: auto 1rem;
     align-self: left;
   }
