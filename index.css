@@ -1,0 +1,185 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Hide content that isn't :target, and hide the default section if any section before it is :target. */
+/* N.B. default section (about) MUST be last in html. */
+.content, .content:target ~ #about {
+  display: none;
+}
+
+/* Show :target content and the default content (loses to .content:target ~ #about). */
+#about, .content:target {
+  display: block;
+}
+
+body, html {
+  background-color: #eee;
+  color: #222;
+  height: 100%;
+}
+
+header {
+  width: 90vw;
+  text-align: center;
+  margin: 0 auto;
+}
+header::after {
+  display: block;
+  content: "";
+  width: 90vw;
+  margin: 0 auto;
+  border-bottom: 1px solid #000;
+}
+
+h1, h2, h3 {
+  font-family: 'Proza Libre', sans-serif;
+  color: black;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav li + li::before {
+  content: '|'
+}
+
+.project-info {
+  position: relative;
+  width: 90vw;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.project-image {
+  width: 40vw;
+  height: 40vw;
+  max-width: 300px;
+  max-height: 300px;
+  display: inline-block;
+
+}
+
+.techstack {
+  max-width: 40vw;
+  max-height: 40vw;
+  display: inline-block;
+}
+
+.tech {
+  height: 1.5rem;
+  width: auto;
+  display: block;
+  margin: .75rem;
+}
+
+.project-links {
+  display: inline-block;
+  max-width: 90vw;
+}
+
+.pl {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  background-color: lightgrey;
+  border: 1px solid black;
+  border-radius: .25rem;
+  padding: .25rem;
+  box-shadow: 3px 3px 5px;
+  margin: .25rem .5rem;
+}
+
+.portrait {
+  max-width: 200px;
+  width: 60vw;
+  min-width: 100px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 50%;
+}
+
+main {
+  max-width: 600px;
+  margin: 1rem auto;
+}
+
+
+p {
+  line-height: 1.4 rem;
+}
+
+address {
+  font-style: normal;
+}
+
+@media screen and (min-width: 700px) {
+  header::after {
+    border-bottom: none;
+    width: 1px;
+  }
+
+  header {
+    height: 100%;
+    border: 1px solid blue;
+    flex-grow: 0;
+    width: fit-content;
+  }
+  main {
+    border: 1px solid red;
+    padding: 0 10em;
+    flex-grow: 1;
+    margin: 0;
+
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    height: 100%;
+
+  }
+
+  nav li {
+    display: flex;
+    flex-grow: 0;
+  }
+
+  nav li + li::before {
+    content: ''
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: right;
+  }
+
+
+
+  nav {
+    height: 8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+}

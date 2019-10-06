@@ -4,20 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Proza+Libre&display=swap">
+  <link rel="stylesheet" href="index.css">
   <title>Michael Kirsch</title>
 </head>
 <body>
-  <header>
-    <h1>Michael Kirsch</h1>
-    <nav>
-      <a href="./index.html">About</a>
-      <a href="./proj.html">Projects</a>
-    </nav>
-  </header>
-  <main>
-    <!--image goes here-->
+  <div class="wrapper">
+    <header>
+      <h1>Michael Kirsch</h1>
+      <nav>
+        <ol>
+          <li>
+            <a href="#about" class="about navlink">About</a>
+          </li>
+          <li>
+            <a href="#projects" class="projects navlink">Projects</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+    <main>
+      <section class="content projects" id="projects">
+        <h2>My Projects</h2>
+        <section class="project">
+          <h3>Quiz Hunter</h3>
+          <div class="project-info">
+            <img class="project-image"
+                src="media/qhmin.png"
+                alt="a screenshot of the Quiz Hunter webapp">
+            <div class="techstack">
+              <img class="tech square"
+                   src="media/HTML5_Badge.svg"
+                   alt="HTML 5">
+              <img class="tech square"
+                   src="media/javascript.svg"
+                   alt="javascript">
+              <img class="tech rect"
+                   src="media/jQuery-Logo.svg"
+                   alt="jQuery">
+              <img class="tech rect"
+                   src="media/csst.svg"
+                   alt="css">
+              <!--html5, css, jQuery-->
+            </div>
+            <div class="project-links">
+              <a class="pl live" href="https://thinkful-ei-heron.github.io/Mike-DanielB-quiz-hunter/">Live App</a>
+              <a class="pl repo" href="https://github.com/thinkful-ei-heron/Mike-DanielB-quiz-hunter">GitHub repository</a>
+            </div>
+          </div>
+          <p class="project-description">A simple app for a quiz about the Monster Hunter series.  The back end is built as a generic quiz app, though since scoring is handled locally it is only suitable for entertainment purposes.  The app is designed to scale to any number of questions.  Questions and answers are presented in randomized order so that users wishing to improve their score must learn the answer instead of a pattern.</p>
+        </section>
+      </section>
 
-  </main>
+      <section class="content about" id="about"> <!--default section, must be last!-->
+          <img class="portrait"
+               src="media/portrait.jpg"
+               alt="image of Michael Kirsch">
+          <h2>Hi, I'm Michael. I solve problems.</h2>
+          <p>I'm a fixer, information-gatherer, and a tenacious problem solver, also known as a "smoother over of bumps".  Objective and forthright in a creative environment.  I enjoy finding pain points in existing systems and fixing them up.</p>
+          <address>
+            <h2>Contact Me:</h2>
+            <a href="https://github.com/mikirsch">GitHub</a>
+            <a href="mailto:michaelskirsch@gmail.com">email</a>
+          </address>
+        </section>
+    </main>
+  </div>
 
 </body>
 </html>
