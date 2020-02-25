@@ -75,18 +75,18 @@ nav {
 .project {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 .project-info {
   position: relative;
   width: 90vw;
   max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
 }
-
+.flex-child {
+  margin: auto;
+}
 .project-image {
   width: 40vw;
   height: auto;
@@ -186,7 +186,7 @@ main {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 3rem;
+    padding: 0 3rem;
     align-self: center;
     max-width: 85vw;
   }
@@ -216,13 +216,15 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-content: right;
+    /* align-content: right; */
     margin: auto 1rem auto 0;
     padding: 0 3%;
     height: 90%;
     border: none;
     border-right: 1px solid #444;
-    width: fit-content;
+    width: 15vw;
+    height: 100vh;
+    position: fixed;
   }
 
   nav {
@@ -231,14 +233,22 @@ main {
     flex-direction: column;
     justify-content: space-around;
   }
+  .projects:target,
+  .project,
+  main {
+    display: block;
+  }
+  main {
+    margin-left: 15vw;
+  }
 }
 
 @media (min-width: 1600px) {
   .project {
     /* flex-direction: row; */
-    align-items: center;
+    /* align-items: center;
     margin: auto;
-    max-width: 90vw;
+    max-width: 90vw; */
   }
 
   .project > p {
