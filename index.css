@@ -5,16 +5,19 @@
 
 /* Hide content that isn't :target, and hide the default section if any section before it is :target. */
 /* N.B. default section (about) MUST be last in html. */
-.content, .content:target ~ #about {
+.content,
+.content:target ~ #about {
   display: none;
 }
 
 /* Show :target content and the default content (loses to .content:target ~ #about). */
-#about, .content:target {
+#about,
+.content:target {
   display: block;
 }
 
-body, html {
+body,
+html {
   background-color: #eee;
   color: #222;
   height: 100%;
@@ -28,13 +31,15 @@ header {
 }
 header::after {
   display: block;
-  content: "";
+  content: '';
   width: 90vw;
   margin: 0 auto;
   border-bottom: 1px solid #000;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Proza Libre', sans-serif;
   color: black;
 }
@@ -60,11 +65,11 @@ nav a {
 
 nav a + a::before {
   content: '|';
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
 }
 
 nav {
-  margin: .5rem;
+  margin: 0.5rem;
 }
 
 .project {
@@ -84,11 +89,9 @@ nav {
 
 .project-image {
   width: 40vw;
-  height: 40vw;
-  max-width: 300px;
-  max-height: 300px;
+  height: auto;
+  max-height: 50vh;
   display: inline-block;
-
 }
 
 .techstack {
@@ -103,7 +106,7 @@ nav {
   height: 1.5rem;
   width: auto;
   display: inline-block;
-  margin: .75rem;
+  margin: 0.75rem;
 }
 
 .project-links {
@@ -117,12 +120,13 @@ nav {
   color: black;
   background-color: lightgrey;
   border: 1px solid black;
-  border-radius: .25rem;
-  padding: .25rem;
+  border-radius: 0.25rem;
+  padding: 0.25rem;
   box-shadow: 3px 3px 5px;
-  margin: .25rem .5rem;
+  margin: 0.25rem 0.5rem;
   min-width: fit-content;
   width: 100%;
+  max-width: 18em;
 }
 
 .portrait {
@@ -133,7 +137,6 @@ nav {
   margin: 1rem auto;
   border-radius: 50%;
 }
-
 
 p {
   line-height: 1.4rem;
@@ -157,8 +160,13 @@ main {
   width: 90vw;
 }
 
-
 @media screen and (min-width: 800px) {
+  .project-image {
+    height: auto;
+    width: auto;
+    max-width: 15vw;
+    max-height: 50vh;
+  }
   header::after {
     display: none;
   }
@@ -169,13 +177,18 @@ main {
     flex-direction: row;
     height: 100%;
   }
+  .project-description {
+    padding: 1rem;
+    margin: auto auto auto 1rem;
+  }
 
   .project-info {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 3rem;
+    padding: 3rem;
     align-self: center;
+    max-width: 85vw;
   }
   .techstack {
     flex-direction: column;
@@ -196,7 +209,7 @@ main {
   }
 
   nav a + a::before {
-    content: ''
+    content: '';
   }
 
   header {
@@ -205,13 +218,12 @@ main {
     justify-content: center;
     align-content: right;
     margin: auto 1rem auto 0;
-    padding: 0 5%;
+    padding: 0 3%;
     height: 90%;
     border: none;
     border-right: 1px solid #444;
-    width: fit-content
+    width: fit-content;
   }
-
 
   nav {
     height: 8rem;
@@ -219,18 +231,17 @@ main {
     flex-direction: column;
     justify-content: space-around;
   }
-
 }
 
 @media (min-width: 1600px) {
   .project {
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
-    margin:auto;
+    margin: auto;
     max-width: 90vw;
   }
 
- .project > p {
+  .project > p {
     margin: auto 1rem;
     align-self: left;
   }
