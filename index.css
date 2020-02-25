@@ -165,7 +165,7 @@ main {
     height: auto;
     width: auto;
     max-width: 15vw;
-    max-height: 50vh;
+    max-height: 30vh;
   }
   header::after {
     display: none;
